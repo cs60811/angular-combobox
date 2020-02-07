@@ -1,0 +1,23 @@
+<h2>Products</h2>
+
+<ul>
+  <li *ngFor="let item of Place">{{item.ID}} {{item.Place}} </li>
+  <li >asd  </li>
+</ul>
+<!--update($event.target)-->
+<select [(ngModel)]="selectPlace" name="Place" (change)="updateDateOfPlace($event.target.value)" required>
+  <option *ngFor= 'let PlaceA of Place' [value]="PlaceA.Place">{{PlaceA.Place}}</option>
+</select>
+
+<select *ngIf="selectPlace" [(ngModel)]="selectDate" name="Date"  required>
+  <option *ngFor= 'let DateA of DateOfPlace ' [value]="DateA.Date">{{DateA.Date}}</option>
+</select>
+
+123123
+
+
+
+<!-- 
+測試連動下拉選單
+-->
+
